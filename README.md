@@ -6,8 +6,10 @@ doing things is inspired by the way [Git](http://www.git-scm.com) works, only si
 Using the diff library isn't hard. You create a new instance of the class
 and you pass along your data arrays in the constructor and call one of the utility methods:
 
-	$diff = new Diff($a, $b);
-	print '<pre>' . print_r($diff->toArray(), true) . '</pre>';
+```php
+$diff = new Diff($a, $b);
+print '<pre>' . print_r($diff->toArray(), true) . '</pre>';
+```
 
 The `toArray` function shows the result as an array which you can work with later on.
 
