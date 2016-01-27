@@ -11,6 +11,8 @@ $diff = new Diff($a, $b);
 print '<pre>' . print_r($diff->toArray(), true) . '</pre>';
 ```
 
+See the [index.php](https://github.com/sebastiaanfranken/php-diff-library/blob/master/index.php) file for a more *in depth* example of how to use this class
+
 The `toArray` function shows the result as an array which you can work with later on.
 
 ## Supported methods
