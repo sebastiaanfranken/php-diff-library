@@ -19,18 +19,18 @@ spl_autoload_register(function($class) {
 $a = [
 	"voornaam" => "Sebastiaan",
 	"achternaam" => "Francken",
-	"adres" => "Timberwolfstraat 13",
-	"postcode" => "4758 AJ",
-	"telefoonnummer" => "06 410 80 353",
-	"emailadres" => "sebastiaan@sebastiaanfranken.nl"
+	"adres" => "Klaaslaan",
+	"postcode" => "1234 AA",
+	"telefoonnummer" => "123456789",
+	"emailadres" => "klaas@laan.nl"
 ];
 
 $b = [
 	"voornaam" => "Sebastiaan",
 	"achternaam" => "Franken",
-	"adres" => "Timberwolfstraat 13",
-	"postcode" => "4758 AJ",
-	"telefoonnummer" => "06 410 80 353",
+	"adres" => "Klaaslaan 1044",
+	"postcode" => "1234 AA",
+	"telefoonnummer" => "123456789",
 	"vrijwilliger" => "ja"
 ];
 
