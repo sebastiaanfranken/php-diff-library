@@ -33,3 +33,7 @@ The class has the following methods:
 - [`setA`](https://github.com/sebastiaanfranken/php-diff-library/blob/master/Diff.php#L335-L339)
 - [`getB`](https://github.com/sebastiaanfranken/php-diff-library/blob/master/Diff.php#L347-L350)
 - [`setB`](https://github.com/sebastiaanfranken/php-diff-library/blob/master/Diff.php#L358-L362)
+
+## Demo image
+Since an image is worth a thousand words..
+![php diff image](https://raw.githubusercontent.com/sebastiaanfranken/php-diff-library/master/demo.png)
