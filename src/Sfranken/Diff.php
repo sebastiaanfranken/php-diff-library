@@ -362,4 +362,42 @@ class Diff
 		$this->b = $bravo;
 		return $this;
 	}
+
+	/**
+	 * Rewinds one (1) operation done on the arrays.
+	 *
+	 * @param int $key The key to rewind, for a list of keys see toArray()
+	 * @param bool $final Is this the final rewind operation? If it is this will return the "bravo" array,
+	 * otherwise it will return a complete Diff object so you can chain rewind()s together. Make sure your last
+	 * rewind() has a key and 'true' (2 arguments, not 1)
+	 *
+	 * @return array|Diff object|false
+	 * @access public
+	 */
+	public function rewind($key, $final = false)
+	{
+		if(array_key_exists($key, $this->diff))
+		{
+			$diff = $this->diff[$key];
+
+			switch($diff['action'])
+			{
+				case self::ALTERED:
+					$this->b[$diff['key']] = $diff['alpha'];
+				break;
+
+				case self::REMOVED:
+					$this->b[$diff['key']] = $diff['alpha'];
+				break;
+
+				case self::ADDED:
+					unset($this->b[$diff['key']]);
+				break;
+			}
+
+			return ($final === true) ? $this->getB() : $this;
+		}
+
+		return false;
+	}
 }
