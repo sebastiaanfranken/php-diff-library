@@ -6,6 +6,8 @@
  * @author Sebastiaan Franken <sebastiaan@sebastiaanfranken.nl>
  */
 
+namespace Sfranken;
+
 class Diff
 {
 	const ADDED = 'ADDED';

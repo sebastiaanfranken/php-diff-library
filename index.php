@@ -8,7 +8,7 @@ function pr($what)
 }
 
 spl_autoload_register(function($class) {
-	$filename = __DIR__ . DIRECTORY_SEPARATOR . str_replace('\\', DIRECTORY_SEPARATOR, $class) . '.php';
+	$filename = __DIR__ . '/src/' . str_replace('\\', '/', $class) . '.php';
 
 	require_once($filename);
 });
@@ -34,5 +34,5 @@ $b = [
 	"vrijwilliger" => "ja"
 ];
 
-$diff = new Diff($a, $b);
+$diff = new Sfranken\Diff($a, $b);
 print pr($diff->toArray());
