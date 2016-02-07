@@ -42,12 +42,13 @@ class Diff
 	 */
 	public function results()
 	{
+		$changes = [];
+
 		for($i = 0; $i < count($this->diff) -1; ++$i)
 		{
 			$first = $i;
 			$second = $i + 1;
 			$label = $first . '::' . $second;
-			$changes = [];
 
 			$keys = array_merge(array_keys($this->diff[$first]), array_keys($this->diff[$second]));
 			$keys = array_values(array_unique($keys));
