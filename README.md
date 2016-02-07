@@ -7,8 +7,10 @@ Using the diff library isn't hard. You create a new instance of the class
 and you pass along your data arrays in the constructor and call one of the utility methods:
 
 ```php
-$diff = new Diff($a, $b);
+<?php
+$diff = new Sfranken\Diff($a, $b);
 print '<pre>' . print_r($diff->toArray(), true) . '</pre>';
+?>
 ```
 
 See the [index.php](https://github.com/sebastiaanfranken/php-diff-library/blob/master/index.php) file for a more *in depth* example of how to use this class
@@ -18,26 +20,15 @@ The `toArray` function shows the result as an array which you can work with late
 ## Supported methods
 The class has the following methods:
 
-- [`__construct`](https://github.com/sebastiaanfranken/php-diff-library/blob/master/src/Sfranken/Diff.php#L46-L88)
-- [`toArray`](https://github.com/sebastiaanfranken/php-diff-library/blob/master/src/Sfranken/Diff.php#L96-L99)
-- [`toObject`](https://github.com/sebastiaanfranken/php-diff-library/blob/master/src/Sfranken/Diff.php#L107-L110)
-- [`toJSON`](https://github.com/sebastiaanfranken/php-diff-library/blob/master/src/Sfranken/Diff.php#L118-L121)
-- [`getKey`](https://github.com/sebastiaanfranken/php-diff-library/blob/master/src/Sfranken/Diff.php#L130-L133)
-- [`getKeys`](https://github.com/sebastiaanfranken/php-diff-library/blob/master/src/Sfranken/Diff.php#L141-L154)
-- [`getAlpha`](https://github.com/sebastiaanfranken/php-diff-library/blob/master/src/Sfranken/Diff.php#L163-L166)
-- [`getAlphas`](https://github.com/sebastiaanfranken/php-diff-library/blob/master/src/Sfranken/Diff.php#L174-L187)
-- [`getBeta`](https://github.com/sebastiaanfranken/php-diff-library/blob/master/src/Sfranken/Diff.php#L196-L199)
-- [`getBetas`](https://github.com/sebastiaanfranken/php-diff-library/blob/master/src/Sfranken/Diff.php#L207-L220)
-- [`getAction`](https://github.com/sebastiaanfranken/php-diff-library/blob/master/src/Sfranken/Diff.php#L229-L232)
-- [`getActions`](https://github.com/sebastiaanfranken/php-diff-library/blob/master/src/Sfranken/Diff.php#L240-L253)
-- [`getAltered`](https://github.com/sebastiaanfranken/php-diff-library/blob/master/src/Sfranken/Diff.php#L261-L274)
-- [`getRemoved`](https://github.com/sebastiaanfranken/php-diff-library/blob/master/src/Sfranken/Diff.php#L282-L294)
-- [`getAdded`](https://github.com/sebastiaanfranken/php-diff-library/blob/master/src/Sfranken/Diff.php#L303-L316)
-- [`getA`](https://github.com/sebastiaanfranken/php-diff-library/blob/master/src/Sfranken/Diff.php#L324-L327)
-- [`setA`](https://github.com/sebastiaanfranken/php-diff-library/blob/master/src/Sfranken/Diff.php#L335-L339)
-- [`getB`](https://github.com/sebastiaanfranken/php-diff-library/blob/master/src/Sfranken/Diff.php#L347-L350)
-- [`setB`](https://github.com/sebastiaanfranken/php-diff-library/blob/master/src/Sfranken/Diff.php#L358-L362)
-- [`rewind`](https://github.com/sebastiaanfranken/php-diff-library/blob/master/src/Sfranken/Diff.php#L377-L402)
+- [`__construct`](https://github.com/sebastiaanfranken/php-diff-library/blob/2.1/src/Sfranken/Diff.php#L33-L82)
+- [`toArray`](https://github.com/sebastiaanfranken/php-diff-library/blob/2.1/src/Sfranken/Diff.php#L90-L93)
+- [`toObject`](https://github.com/sebastiaanfranken/php-diff-library/blob/2.1/src/Sfranken/Diff.php#L102-L105)
+- [`toJSON`](https://github.com/sebastiaanfranken/php-diff-library/blob/2.1/src/Sfranken/Diff.php#L113-L116)
+- [`getAction`](https://github.com/sebastiaanfranken/php-diff-library/blob/2.1/src/Sfranken/Diff.php#L127-L150)
+- [`getAltered`](https://github.com/sebastiaanfranken/php-diff-library/blob/2.1/src/Sfranken/Diff.php#L160-L163)
+- [`getAdded`](https://github.com/sebastiaanfranken/php-diff-library/blob/2.1/src/Sfranken/Diff.php#L173-L176)
+- [`getRemoved`](https://github.com/sebastiaanfranken/php-diff-library/blob/2.1/src/Sfranken/Diff.php#L186-L189)
+- [`getSingle`](https://github.com/sebastiaanfranken/php-diff-library/blob/2.1/src/Sfranken/Diff.php#L200-L203)
 
 ## Demo image
 Since an image is worth a thousand words..
