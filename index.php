@@ -35,4 +35,4 @@ $b = [
 ];
 
 $diff = new Sfranken\Diff($a, $b);
-print pr($diff->results()->toArray());
+print pr($diff->toArray());
