@@ -116,6 +116,30 @@ class Diff
 	}
 
 	/**
+	 * Getter for the raw diff data array
+	 *
+	 * @return array
+	 * @access public
+	 */
+	public function getDiff()
+	{
+		return $this->diff;
+	}
+
+	/**
+	 * Setter for a new diff array
+	 *
+	 * @param array $newdiff The new diff data
+	 * @return Sfranken\Diff
+	 * @access public
+	 */
+	public function setDiff(array ... $diff)
+	{
+		$this->diff = $diff;
+		return $this;
+	}
+
+	/**
 	 * Returns an array with every item in $diff that matches
 	 * the provided action
 	 *
