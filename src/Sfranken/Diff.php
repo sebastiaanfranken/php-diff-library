@@ -11,6 +11,13 @@ namespace Sfranken;
 
 class Diff
 {
+
+	/*
+	 * The following thee constants (ADDED, REMOVED, ALTERED) are used to denote one or more of the following things:
+	 * - added items
+	 * - removed items
+	 * - altered items
+	 */
 	const ADDED = 'ADDED';
 	const REMOVED = 'REMOVED';
 	const ALTERED = 'ALTERED';
@@ -136,6 +143,19 @@ class Diff
 	public function setDiff(array ... $diff)
 	{
 		$this->diff = $diff;
+		return $this;
+	}
+
+	/**
+	 * Append the array $append onto our $diff array
+	 *
+	 * @param array $append The new array to append
+	 * @return Sfranken\Diff
+	 * @access public
+	 */
+	public function appendDiff(array $append)
+	{
+		$this->diff[] = $append;
 		return $this;
 	}
 
