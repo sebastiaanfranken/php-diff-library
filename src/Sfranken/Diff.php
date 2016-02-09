@@ -115,11 +115,13 @@ class Diff
 	 * Returns the $diff array as a JSON object
 	 *
 	 * @return object
+	 * @param bool $prettyprint Pass the JSON_PRETTYPRINT option to json_encode() ? Useful for debugging code
 	 * @access public
 	 */
-	public function toJSON()
+	public function toJSON($prettyprint = false)
 	{
-		return json_encode($this->diff);
+		$flags = !$prettyprint ? JSON_FORCE_OBJECT : JSON_FORCE_OBJECT | JSON_PRETTY_PRINT;
+		return json_encode($this->diff, $flags);
 	}
 
 	/**
